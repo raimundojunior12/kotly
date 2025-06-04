@@ -11,8 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.test2.models.Pessoa
 import com.example.test2.ui.theme.Test2Theme
 import com.example.test2.views.FichaPessoal
+import com.example.test2.views.PessoaCard
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    FichaPessoal("Raimundo", 38, listOf("Leitura", "Corrida", "Cinema", "Música"))
+    PessoaCard(Pessoa("Raimundo", 38,))
 //    Text(
 //        text = "Hello $name!",
 //        modifier = modifier
